@@ -1,8 +1,19 @@
-body {
+body,
+html,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 2rem;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -11,21 +22,34 @@ h1 {
 }
 
 input[type="text"] {
-    padding: 10px;
+    padding: 12px 15px;
     width: 60%;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    max-width: 400px;
+    margin: 20px auto 10px auto;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px #4CAF50;
+    outline: none;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: auto;
+    min-width: 80px;
 }
 
 button:hover {
@@ -33,26 +57,69 @@ button:hover {
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    flex: 1;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 li {
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 18px;
+    color: #444;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #f0f7ff;
 }
 
 li button {
     background-color: #ff5252;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 li button:hover {
     background-color: #e64545;
+}
+
+footer {
+    padding: 20px;
+    background-color: #b0bada;
+    text-align: center;
+    margin-top: auto;
+}
+
+.git-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    transition: color 0.3s;
+}
+
+.git-link:hover {
+    color: #007bff;
+}
+
+.form-send {
+    width: 200px;
+    margin: 0 auto;
 }
