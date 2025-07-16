@@ -1,4 +1,5 @@
 export const ADD_TODO = 'ADD_TODO'
+export const DELETE_TODO = 'DELETE_TODO'
 
 export const addToDo = (text) => {
     return ({
@@ -6,8 +7,6 @@ export const addToDo = (text) => {
         payload: text,
     })
 }
-
-export const DELETE_TODO = 'DELETE_TODO'
 
 export const deleteToDO = (index) => {
     return ({
