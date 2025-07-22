@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 function ToDo() {
   const dispatch = useDispatch()
-  const todos = useSelector(state => state)
+  const todos = useSelector(state => state.todo)
   const [inputValue, setInputValue] = useState('')
 
   function sendToDo() {
